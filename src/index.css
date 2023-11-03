@@ -1,0 +1,58 @@
+*{
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradientContainer{
+  display: flex;
+}
+
+.gradient{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  animation: transition 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transition{
+  from{opacity: 0; transform: translateY(-400px);}
+  to{opacity: 1; transform: translateY(0px);}
+}
+
+img{
+  animation: click 1s;
+  position: absolute;
+  animation-iteration-count: infinite;
+  /* top: -100px; */
+  transition: all 1s;
+  transform: translateY(50px) scale(3);
+}
+
+@keyframes click{
+  0%{
+    top: 0px
+  }50%{
+    top: 20px
+  }100%{
+    top: 0px
+  }
+}
+
+.down{
+  transform: translateY(800px) scale(1);
+  transition: all 1s;
+  /* border-bottom: 1px solid black; */
+}
+
